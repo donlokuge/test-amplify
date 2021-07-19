@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to Production
 
 on:
   workflow_dispatch:
@@ -19,5 +19,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+      - run: npm install
       - run: npm run build
       - run: npm test
