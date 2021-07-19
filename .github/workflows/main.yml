@@ -1,11 +1,16 @@
 name: Deploy to Production
 
 on:
+  push:
+    branches:
+      - "master"
   workflow_dispatch:
       deploy:
         description: 'Deploy to production'
         required: false
         default: 'The Octoverse'
+        
+
 
 jobs:
   build:
